@@ -1,20 +1,38 @@
-#define PR(x) printf("x=%u, *x=%d, &x=%u\n", x, *x, &x)
-#include <stdio.h>
-
+#include <iostream>
 using namespace std;
 
-int main() {
-    int mas[] = {100, 200, 300};
-    int *ptr1, *ptr2;
-    ptr1 = mas;
-    // Сохраняем адрес памяти элемента mas[2] в ptr2. * - обратная операция - получает объект по адресу памяти
-    ptr2=&mas[2];
-    PR(ptr1);
-    ptr1++;
-    PR(ptr1);
-    PR(ptr2);
-    ++ptr2;
-    printf("ptr2-ptr1=%lld\n", ptr2-ptr1);
+void obmen1(int a, int b) {
+    int temp = a;
+    a = b;
+    b = temp;
+    cout <<"\n в функции обмена 1:  a="<< a << " b=" << b;
+}
+void obmen2(int* a, int* b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+    cout <<"\n в функции обмена 2:  a="<< *a << " b=" << *b;
+}
+void obmen3(int& a, int& b) {
+    int temp = a;
+    a = b;
+    b = temp;
+    cout <<"\n в функции обмена 3:  a="<< *a << " b=" << *b;
+}
 
-    return 0;
+int main() {
+    int a = 2;
+    int b = 5;
+    // void obmen2(int*, int*);
+    // void obmen3(int&, int&);
+    cout <<"до обмена:  a="<< a <<" b="<< b;
+    obmen1(a, b);
+    cout <<"\n после обмена 1:  a="<< a << " b=" << b;
+    obmen2(&a, &b);
+    cout <<"\n после обмена 2:  a="<< a << " b=" << b;
+    obmen3(a, b);
+    cout <<"\n после обмена 3:  a="<< a << " b=" << b;
+    // obmen1 не изменяет оригинальные переменные, используется передача по значению.
+    // obmen3 также изменяет оригинальные переменные, но используется более удобный синтаксис ссылок, что делает код проще и безопаснее.
+    // obmen2 изменяет оригинальные переменные, используется передача указателей.
 }

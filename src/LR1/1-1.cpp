@@ -1,15 +1,8 @@
+// Програма возводит в степень от 0 до 10 число 2
+
+
 #include <iostream>
 using namespace std;
-
-int main() {
-    int power(int, int);
-    for (int i = 0; i < 10; i++) {
-        int k = power(2, i);
-        cout << "i = " << i << " k = " << k << endl;
-    }
-
-    return 0;
-}
 
 int power(int n, int x) {
     int p = 1;
@@ -18,4 +11,26 @@ int power(int n, int x) {
     }
 
     return p;
+}
+
+int main() {
+
+    std::string numInput;
+    std::string pwInput;
+int num;
+int pw;
+
+std::cout << "Введите число, которое я возведу в степень: ";
+std::cin >> numInput;
+std::cout << "Введите стпень числа возводимого в степень: ";
+std::cin >> pwInput;
+
+//В круглых скобках функции указывается значение, которое нужно конвертировать
+num = stoi(numInput);
+pw = stoi(pwInput);
+        int k = power(num, pw);
+        cout << "Число " << num << " После возвозведения в степень " << k << endl;
+
+
+    return 0;
 }
