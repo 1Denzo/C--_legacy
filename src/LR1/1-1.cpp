@@ -1,6 +1,5 @@
 // Програма возводит в степень от 0 до 10 число 2
 
-
 #include <iostream>
 using namespace std;
 
@@ -30,7 +29,5 @@ num = stoi(numInput);
 pw = stoi(pwInput);
         int k = power(num, pw);
         cout << "Число " << num << " После возвозведения в степень " << k << endl;
-
-
     return 0;
 }
