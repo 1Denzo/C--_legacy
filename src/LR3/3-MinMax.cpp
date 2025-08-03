@@ -13,9 +13,9 @@ int main() {
         for (int j = i + 1; j < n; j++)
             if (arr[j] < arr[imin])
                 imin = j;
-        int t = arr[i];
+        int tmp = arr[i];
         arr[i] = arr[imin];
-        arr[imin] = t;
+        arr[imin] = tmp;
     }
     for (int i = 0; i < n; i++)
         cout << arr[i] << ' ';

@@ -8,6 +8,7 @@
 
 using namespace std;
 
+//Метод для нахождения минимума\максимума матрицы.
 tuple<float, float> minMax(float m[][N]) {
     float min = numeric_limits<float>::infinity();
     float max = -numeric_limits<float>::infinity();
@@ -20,6 +21,7 @@ tuple<float, float> minMax(float m[][N]) {
     return {min, max};
 }
 
+//Метод для нахождения максимума\минимума нижнетреугольной части матрицы.
 tuple<float, float> minMaxBottomTriangle(float m[][N]) {
     float min = numeric_limits<float>::infinity();
     float max = -numeric_limits<float>::infinity();
@@ -32,6 +34,7 @@ tuple<float, float> minMaxBottomTriangle(float m[][N]) {
     return {min, max};
 }
 
+//Метод для нахождения максимума\минимума верхнетреугольной части матрицы.
 tuple<float, float> minMaxTopTriangle(float m[][N]) {
     float min = numeric_limits<float>::infinity();
     float max = -numeric_limits<float>::infinity();
@@ -44,6 +47,7 @@ tuple<float, float> minMaxTopTriangle(float m[][N]) {
     return {min, max};
 }
 
+//Метод для нахождения максимума\минимума главной диагонали матрицы.
 tuple<float, float> minMaxMainDiagonal(float m[][N]) {
     float min = numeric_limits<float>::infinity();
     float max = -numeric_limits<float>::infinity();
@@ -55,6 +59,7 @@ tuple<float, float> minMaxMainDiagonal(float m[][N]) {
     return {min, max};
 }
 
+//Метод для нахождения максимума\минимума второстепенной диагонали матрицы.
 tuple<float, float> minMaxSecondDiagonal(float m[][N]) {
     float min = numeric_limits<float>::infinity();
     float max = -numeric_limits<float>::infinity();
@@ -67,6 +72,7 @@ tuple<float, float> minMaxSecondDiagonal(float m[][N]) {
     return {min, max};
 }
 
+//Метод для нахождения cреднеарифметического значение элементов матрицы.
 float avg(float m[][N]) {
     float sum = 0;
     for (int i = 0; i < N; i++)
@@ -76,6 +82,7 @@ float avg(float m[][N]) {
     return sum / (N * N);
 }
 
+//Метод для нахождения cумм значения элементов нижнетреугольной части матрицы.
 float sumBottomTriangle(float m[][N]) {
     float sum = 0;
     for (int i = 0; i < N; i++)
@@ -86,11 +93,13 @@ float sumBottomTriangle(float m[][N]) {
     return sum;
 }
 
+//Метод для нахождения cреднеарифметического значения элементов нижнетреугольной части матрицы.
 float avgBottomTriangle(float m[][N]) {
     int count = (1 + N) / 2 * N;
     return sumBottomTriangle(m) / count;
 }
 
+//Метод для нахождения cумм значения элементов верхнетреугольной части матрицы.
 float sumTopTriangle(float m[][N]) {
     float sum = 0;
     for (int i = 0; i < N; i++)
@@ -101,11 +110,13 @@ float sumTopTriangle(float m[][N]) {
     return sum;
 }
 
+//Метод для нахождения cреднеарифметического значения элементов верхнетреугольной части матрицы.
 float avgTopTriangle(float m[][N]) {
     int count = (1 + N) / 2 * N;
     return sumTopTriangle(m) / count;
 }
 
+//Метод для нахождения cуммы строк матрицы.
 float sumRow(float m[][N], int i) {
     float sum = 0;
     for (int j = 0; j < N; j++)
@@ -114,6 +125,7 @@ float sumRow(float m[][N], int i) {
     return sum;
 }
 
+//Метод для нахождения cуммы столбцов матрицы;
 float sumColumn(float m[][N], int i) {
     float sum = 0;
     for (int j = 0; j < N; j++)
@@ -122,14 +134,15 @@ float sumColumn(float m[][N], int i) {
     return sum;
 }
 
+//Метод для нахождения минимального значения в строке.
 float minRow(float m[][N], int i) {
-    float sum = 0;
+    float min = numeric_limits<float>::infinity();
     for (int j = 0; j < N; j++)
-        sum += m[i][j];
+        min = std::min(min, m[i][j]);
 
-    return sum;
-}
+    return min;
 
+//Метод для нахождения минимального значения в столбце.
 float minColumn(float m[][N], int i) {
     float min = numeric_limits<float>::infinity();
     for (int j = 0; j < N; j++)
@@ -138,6 +151,7 @@ float minColumn(float m[][N], int i) {
     return min;
 }
 
+//Метод для нахождения максимального значения в строке.
 float maxRow(float m[][N], int i) {
     float max = -numeric_limits<float>::infinity();
     for (int j = 0; j < N; j++)
@@ -146,6 +160,7 @@ float maxRow(float m[][N], int i) {
     return max;
 }
 
+//Метод для нахождения максимального значения в столбце.
 float maxColumn(float m[][N], int i) {
     float max = -numeric_limits<float>::infinity();
     for (int j = 0; j < N; j++)
@@ -154,14 +169,17 @@ float maxColumn(float m[][N], int i) {
     return max;
 }
 
+//Метод для нахождения cреднеарифметического значения в строке.
 float avgRow(float m[][N], int i) {
     return sumRow(m, i) / N;
 }
 
+//Метод для нахождения cреднеарифметического значения в столбце.
 float avgColumn(float m[][N], int i) {
     return sumColumn(m, i) / N;
 }
 
+//Метод для нахождения элемента, наиболее близкого по значению к среднеарифметическому.
 float nearAvgValue(float m[][N], float avg_val) {
     float diff = numeric_limits<float>::infinity();
     float last_val = m[0][0];
