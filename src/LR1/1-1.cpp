@@ -5,7 +5,7 @@ using namespace std;
 
 int power(int n, int x) {
     int p = 1;
-    for (int i = 1; i < x; i++) {
+    for (int i = 1; i <= x; i++) {
         p *= n;
     }
 
