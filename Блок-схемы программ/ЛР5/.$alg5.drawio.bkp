@@ -1,0 +1,116 @@
+<mxGraphModel>
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+    
+    <!-- Заголовок -->
+    <mxCell id="2" value="XOR File Encryptor" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=16;fontStyle=1" vertex="1" parent="1">
+      <mxGeometry x="200" y="10" width="400" height="40" as="geometry"/>
+    </mxCell>
+    
+    <!-- Блок Main -->
+    <mxCell id="3" value="Main Module&#10;main() function" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf" vertex="1" parent="1">
+      <mxGeometry x="320" y="70" width="160" height="60" as="geometry"/>
+    </mxCell>
+    
+    <!-- Блок Args Parser -->
+    <mxCell id="4" value="Args Parser&#10;Check argc == 4" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" vertex="1" parent="1">
+      <mxGeometry x="120" y="170" width="140" height="60" as="geometry"/>
+    </mxCell>
+    
+    <!-- Блок File I/O -->
+    <mxCell id="5" value="File I/O&#10;Open files" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366" vertex="1" parent="1">
+      <mxGeometry x="320" y="170" width="160" height="60" as="geometry"/>
+    </mxCell>
+    
+    <!-- Блок Encryption -->
+    <mxCell id="6" value="Encryption Engine&#10;XOR with cyclic key" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00" vertex="1" parent="1">
+      <mxGeometry x="520" y="170" width="160" height="60" as="geometry"/>
+    </mxCell>
+    
+    <!-- Блок Error Handler -->
+    <mxCell id="7" value="Error Handler&#10;Return codes" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450" vertex="1" parent="1">
+      <mxGeometry x="320" y="290" width="160" height="60" as="geometry"/>
+    </mxCell>
+    
+    <!-- Связи -->
+    <mxCell id="8" value="calls" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="3" target="4">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    
+    <mxCell id="9" value="calls" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="5">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    
+    <mxCell id="10" value="calls" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="6">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    
+    <mxCell id="11" value="reads/writes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6" target="5">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    
+    <mxCell id="12" value="on error" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="4" target="7">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    
+    <mxCell id="13" value="on error" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="5" target="7">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    
+    <mxCell id="14" value="on error" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="6" target="7">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    
+    <!-- Панель с параметрами -->
+    <mxCell id="15" value="Program Parameters" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="30" y="390" width="200" height="110" as="geometry"/>
+    </mxCell>
+    <mxCell id="16" value="input_file : source file path" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="15">
+      <mxGeometry y="30" width="200" height="25" as="geometry"/>
+    </mxCell>
+    <mxCell id="17" value="output_file : destination path" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="15">
+      <mxGeometry y="55" width="200" height="25" as="geometry"/>
+    </mxCell>
+    <mxCell id="18" value="key : encryption string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="15">
+      <mxGeometry y="80" width="200" height="30" as="geometry"/>
+    </mxCell>
+    
+    <!-- Панель с алгоритмом -->
+    <mxCell id="19" value="Algorithm" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="480" y="290" width="280" height="170" as="geometry"/>
+    </mxCell>
+    <mxCell id="20" value="1. Check argc == 4" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="19">
+      <mxGeometry y="30" width="280" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="21" value="2. Get input, output, key" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="19">
+      <mxGeometry y="50" width="280" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="22" value="3. Open input file (binary)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="19">
+      <mxGeometry y="70" width="280" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="23" value="4. Open output file (binary)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="19">
+      <mxGeometry y="90" width="280" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="24" value="5. index = 0" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="19">
+      <mxGeometry y="110" width="280" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="25" value="6. while read char c:" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="19">
+      <mxGeometry y="130" width="280" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="26" value="7.   encrypted = c XOR key[index]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="19">
+      <mxGeometry y="150" width="280" height="20" as="geometry"/>
+    </mxCell>
+    
+    <!-- Легенда -->
+    <mxCell id="27" value="Return Codes:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontStyle=1" vertex="1" parent="1">
+      <mxGeometry x="30" y="520" width="100" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="28" value="0 : Success" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;" vertex="1" parent="1">
+      <mxGeometry x="30" y="540" width="100" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="29" value="1 : Error" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;" vertex="1" parent="1">
+      <mxGeometry x="30" y="560" width="100" height="20" as="geometry"/>
+    </mxCell>
+  </root>
+</mxGraphModel>

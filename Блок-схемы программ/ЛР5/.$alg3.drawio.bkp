@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2024-01-15T21:00:00.000Z" agent="Mozilla/5.0" version="21.1.2" etag="file-substring-search">
+  <diagram name="Поиск подстроки в файле" id="substring-search">
+    <mxGraphModel dx="1200" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- ЛЕГЕНДА -->
+        <mxCell id="legend" value="УСЛОВНЫЕ ОБОЗНАЧЕНИЯ:&#xa;🔵 Овал - Начало/Конец&#xa;🟡 Параллелограмм - Ввод/Вывод&#xa;🟢 Прямоугольник - Операции&#xa;🟠 Ромб - Условия&#xa;🔴 Красный - Ошибка&#xa;🟣 Фиолетовый - Функция поиска" style="text;html=1;strokeColor=#666666;fillColor=#f9f9f9;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="20" y="20" width="200" height="150" as="geometry"/>
+        </mxCell>
+        
+        <!-- НАЧАЛО -->
+        <mxCell id="start" value="НАЧАЛО" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=16;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="540" y="20" width="120" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- ОБЪЯВЛЕНИЕ ПЕРЕМЕННЫХ -->
+        <mxCell id="declare" value="Объявление:&#xa;n[50], s[100], *f" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;fontSize=11" parent="1" vertex="1">
+          <mxGeometry x="530" y="90" width="160" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- ЗАПРОС ИМЕНИ ФАЙЛА -->
+        <mxCell id="prompt" value="Вывод: 'Файл:'" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11" parent="1" vertex="1">
+          <mxGeometry x="540" y="160" width="140" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- ВВОД ИМЕНИ ФАЙЛА -->
+        <mxCell id="input" value="scanf('%s', n)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11" parent="1" vertex="1">
+          <mxGeometry x="540" y="220" width="140" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- ОТКРЫТИЕ ФАЙЛА -->
+        <mxCell id="open" value="f = fopen(n, 'r')" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontSize=11" parent="1" vertex="1">
+          <mxGeometry x="540" y="280" width="140" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- ПРОВЕРКА ОТКРЫТИЯ -->
+        <mxCell id="check" value="f == NULL ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11" parent="1" vertex="1">
+          <mxGeometry x="540" y="340" width="140" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- ОШИБКА -->
+        <mxCell id="error" value="Вывод: 'Ошибка'" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11" parent="1" vertex="1">
+          <mxGeometry x="360" y="370" width="140" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- ВЫВОД СОДЕРЖИМОГО ФАЙЛА -->
+        <mxCell id="display" value="Вывод содержимого файла" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12" parent="1" vertex="1">
+          <mxGeometry x="720" y="340" width="160" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- ЦИКЛ ВЫВОДА -->
+        <mxCell id="display_loop" value="while(!feof(f))&#xa;putchar(getc(f))" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontSize=11" parent="1" vertex="1">
+          <mxGeometry x="720" y="400" width="160" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- ВВОД ПОДСТРОКИ -->
+        <mxCell id="sub_prompt" value="Вывод: 'Подстрока:'" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11" parent="1" vertex="1">
+          <mxGeometry x="540" y="480" width="140" height="40" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="sub_input" value="scanf('%s', s)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11" parent="1" vertex="1">
+          <mxGeometry x="540" y="540" width="140" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- ВЫЗОВ ФУНКЦИИ ПОИСКА -->
+        <mxCell id="call_search" value="poisk(f, s)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12" parent="1" vertex="1">
+          <mxGeometry x="540" y="600" width="140" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- БЛОК ФУНКЦИИ ПОИСКА -->
+        <mxCell id="search_func" value="ФУНКЦИЯ ПОИСКА" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="520" y="660" width="180" height="30" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="rewind" value="rewind(f)" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontSize=11" parent="1" vertex="1">
+          <mxGeometry x="520" y="700" width="100" height="40" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="while_lines" value="while fgets(buffer) != NULL" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;fontSize=11" parent="1" vertex="1">
+          <mxGeometry x="520" y="760" width="180" height="40" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="find_sub" value="strstr(ptr, s)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11" parent="1" vertex="1">
+          <mxGeometry x="530" y="820" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="found" value="Вывод: строка, позиция&#xa;count++" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11" parent="1" vertex="1">
+          <mxGeometry x="680" y="820" width="120" height="50" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="continue_search" value="ptr++" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontSize=11" parent="1" vertex="1">
+          <mxGeometry x="530" y="900" width="100" height="40" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="next_line" value="Переход к след. строке" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontSize=11" parent="1" vertex="1">
+          <mxGeometry x="680" y="900" width="120" height="40" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="search_result" value="Вывод итога поиска" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11" parent="1" vertex="1">
+          <mxGeometry x="550" y="960" width="140" height="40" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="return" value="return count" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontSize=11" parent="1" vertex="1">
+          <mxGeometry x="560" y="1020" width="100" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- ЗАКРЫТИЕ ФАЙЛА -->
+        <mxCell id="close" value="fclose(f)" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontSize=11" parent="1" vertex="1">
+          <mxGeometry x="540" y="1090" width="140" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- КОНЕЦ -->
+        <mxCell id="end" value="КОНЕЦ" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=16;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="540" y="1150" width="120" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- ========== СВЯЗИ ========== -->
+        <mxCell id="conn1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="start" target="declare" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="declare" target="prompt" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="prompt" target="input" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="input" target="open" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="open" target="check" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="check" target="error" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="500" y="370" as="sourcePoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="conn7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="error" target="end" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="check" target="display" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="680" y="370" as="sourcePoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="conn9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="display" target="display_loop" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="display_loop" target="sub_prompt" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="sub_prompt" target="sub_input" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="sub_input" target="call_search" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="call_search" target="rewind" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="rewind" target="while_lines" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="while_lines" target="find_sub" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="find_sub" target="found" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="650" y="850" as="sourcePoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="conn17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="find_sub" target="next_line" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="590" y="880" as="sourcePoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="conn18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="found" target="continue_search" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="continue_search" target="find_sub" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="next_line" target="while_lines" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="while_lines" target="search_result" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="610" y="800" as="sourcePoint"/>
+            <mxPoint x="620" y="960" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="conn22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="search_result" target="return" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="return" target="close" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="close" target="end" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,99 @@
+# include <iostream.h>
+class Money
+{
+	long dollars;
+	int cents;
+public:
+	Money (){}
+	Money (long d, int c)
+	{
+	dollars = d;
+	cents = c;
+	}
+int operator>(const Money&) const;
+friend ostream& operator>(ostream& , Money&);
+};
+
+int Money::operator>(const Money& amt) const
+{
+return
+(dollars>atm.dollars)||
+	((dollars>atm.dollars)&&(cents>atm.cents));
+}
+
+ostream& operator<<(ostream& os, Money &ams)
+{
+	os<< "$" << amt.dollars << ',' << atm.cents;
+	return os;
+}
+
+void main (void)
+{
+	Money mas [] = {Money(19,10),
+					Money(99,99),
+					Money(99,95),
+					Money(19,95),
+					};
+	Sort(mas, sizeof(mas)/sizeof(mas[0]));
+	for(i = 0; i < sizeof(mas)/sizeof[0]; i++)
+		cout << "mas[" << i << "j = " << mas[i] << endl;
+}
+####################################################################
+#include <iostream.h>
+template <class T>
+T getmax (T t1, T t2)
+// Возвращает больший из двух параметров
+{
+	return t1 > t2?t1:t2;
+}
+
+template <class T>
+T getmax (T t[], size_t size)
+{
+	T retval = t[0];
+	int i;
+	for(i = 0; i < size; i++)
+		if(t[i] > retval) retval = t[i];
+		return retval;
+}
+
+void main(void)
+{
+int i1 = 3, i2 = 5;
+char *s1 = "строка 1";
+char *s2 = "строка 2";
+cout << "max int = " << getmax(i1, i2) << endl;
+cout << "max str = " << getmax(s1, s2) << endl;
+}
+
+#####################################################################
+
+#include <iostream.h>
+#include <string.h>
+template <class T>
+T getmax(T t1, T t2)
+// Возвращает больший из двух параметров
+{
+	return t1 > t2?t1:t2;
+}
+char* getmax (char s1, char s2) 
+	return strcmp(s1, s2) >0? s1: s2;
+}
+template <class T>
+T getmax(T t[], size_t size)
+{
+	T retval = t[0];
+	int i;
+	for(i = 0; i < size; i++)
+		if(t[i] > retval) retval = t[i];
+	return retval;
+}
+
+void main(void)
+{
+int i1 = 3, i2 = 5;
+char *s1 = "строка1";
+char *s2 = "строка2";
+cout << "max int = " << getmax(i1, i2) << endl;
+cout << "max str = " << getmax(s1, s2) << endl;
+}

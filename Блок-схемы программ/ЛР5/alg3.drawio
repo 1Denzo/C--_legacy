@@ -1,0 +1,171 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.5.2 Chrome/142.0.7444.265 Electron/39.6.1 Safari/537.36" version="29.5.2">
+  <diagram name="Поиск подстроки в файле" id="substring-search">
+    <mxGraphModel dx="1449" dy="859" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="legend" parent="1" style="text;html=1;strokeColor=#666666;fillColor=#f9f9f9;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontSize=10" value="УСЛОВНЫЕ ОБОЗНАЧЕНИЯ:&#xa;🔵 Овал - Начало/Конец&#xa;🟡 Параллелограмм - Ввод/Вывод&#xa;🟢 Прямоугольник - Операции&#xa;🟠 Ромб - Условия&#xa;🔴 Красный - Ошибка&#xa;🟣 Фиолетовый - Функция поиска" vertex="1">
+          <mxGeometry height="150" width="200" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="start" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=16;fontStyle=1" value="НАЧАЛО" vertex="1">
+          <mxGeometry height="50" width="120" x="250" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="declare" parent="1" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;fontSize=11" value="Объявление:&#xa;n[50], s[100], *f" vertex="1">
+          <mxGeometry height="50" width="160" x="410" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="prompt" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11" value="Вывод: &#39;Файл:&#39;" vertex="1">
+          <mxGeometry height="40" width="140" x="590" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="input" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11" value="scanf(&#39;%s&#39;, n)" vertex="1">
+          <mxGeometry height="40" width="140" x="740" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="open" parent="1" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontSize=11" value="f = fopen(n, &#39;r&#39;)" vertex="1">
+          <mxGeometry height="40" width="140" x="910" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="check" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11" value="f == NULL ?" vertex="1">
+          <mxGeometry height="60" width="140" x="910" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="error" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11" value="Вывод: &#39;Ошибка&#39;" vertex="1">
+          <mxGeometry height="40" width="140" x="350" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="display" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12" value="Вывод содержимого файла" vertex="1">
+          <mxGeometry height="40" width="160" x="900" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="display_loop" parent="1" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontSize=11" value="while(!feof(f))&#xa;putchar(getc(f))" vertex="1">
+          <mxGeometry height="50" width="160" x="700" y="185" as="geometry" />
+        </mxCell>
+        <mxCell id="sub_prompt" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11" value="Вывод: &#39;Подстрока:&#39;" vertex="1">
+          <mxGeometry height="40" width="140" x="530" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="sub_input" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11" value="scanf(&#39;%s&#39;, s)" vertex="1">
+          <mxGeometry height="40" width="140" x="530" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="call_search" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12" value="poisk(f, s)" vertex="1">
+          <mxGeometry height="40" width="140" x="530" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="rewind" parent="1" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontSize=11" value="rewind(f)" vertex="1">
+          <mxGeometry height="40" width="100" x="550" y="374" as="geometry" />
+        </mxCell>
+        <mxCell id="while_lines" parent="1" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;fontSize=11" value="while fgets(buffer) != NULL" vertex="1">
+          <mxGeometry height="40" width="180" x="510" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="find_sub" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11" value="strstr(ptr, s)" vertex="1">
+          <mxGeometry height="60" width="120" x="350" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="found" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11" value="Вывод: строка, позиция&#xa;count++" vertex="1">
+          <mxGeometry height="50" width="120" x="480" y="555" as="geometry" />
+        </mxCell>
+        <mxCell id="continue_search" parent="1" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontSize=11" value="ptr++" vertex="1">
+          <mxGeometry height="40" width="100" x="490" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="next_line" parent="1" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontSize=11" value="Переход к след. строке" vertex="1">
+          <mxGeometry height="40" width="120" x="350" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="search_result" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11" value="Вывод итога поиска" vertex="1">
+          <mxGeometry height="40" width="140" x="710" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="return" parent="1" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontSize=11" value="return count" vertex="1">
+          <mxGeometry height="40" width="100" x="730" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="close" parent="1" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontSize=11" value="fclose(f)" vertex="1">
+          <mxGeometry height="40" width="140" x="710" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="end" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=16;fontStyle=1" value="КОНЕЦ" vertex="1">
+          <mxGeometry height="50" width="120" x="220" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="conn1" edge="1" parent="1" source="start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="declare">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn2" edge="1" parent="1" source="declare" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="prompt">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn3" edge="1" parent="1" source="prompt" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="input">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn4" edge="1" parent="1" source="input" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="open">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn5" edge="1" parent="1" source="open" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="check">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn6" edge="1" parent="1" source="check" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="error">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="500" y="370" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn7" edge="1" parent="1" source="error" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn8" edge="1" parent="1" source="check" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="display">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="680" y="370" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn9" edge="1" parent="1" source="display" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="display_loop">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn10" edge="1" parent="1" source="display_loop" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="sub_prompt">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn11" edge="1" parent="1" source="sub_prompt" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="sub_input">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn12" edge="1" parent="1" source="sub_input" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="call_search">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn13" edge="1" parent="1" source="call_search" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="rewind">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn14" edge="1" parent="1" source="search_func" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="while_lines">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn15" edge="1" parent="1" source="while_lines" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="find_sub">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn16" edge="1" parent="1" source="find_sub" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="found">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="650" y="850" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn17" edge="1" parent="1" source="find_sub" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="next_line">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="590" y="880" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn18" edge="1" parent="1" source="found" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="continue_search">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn19" edge="1" parent="1" source="continue_search" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="find_sub">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn20" edge="1" parent="1" source="next_line" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="while_lines">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn21" edge="1" parent="1" source="while_lines" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="search_result">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="610" y="800" as="sourcePoint" />
+            <mxPoint x="620" y="960" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn22" edge="1" parent="1" source="search_result" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="return">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn23" edge="1" parent="1" source="return" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="close">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn24" edge="1" parent="1" source="close" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S9kE3E_SrXM0YiRG3LI3-2" edge="1" parent="1" source="rewind" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="search_func" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600" y="414" as="sourcePoint" />
+            <mxPoint x="610" y="760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="search_func" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=14;fontStyle=1" value="ФУНКЦИЯ ПОИСКА" vertex="1">
+          <mxGeometry height="30" width="180" x="510" y="450" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

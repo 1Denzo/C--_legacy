@@ -1,0 +1,224 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Возведение в степень">
+    <mxGraphModel dx="1000" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- НАЧАЛО main -->
+        <mxCell id="2" value="НАЧАЛО main()" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="340" y="20" width="120" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- Объявление переменных -->
+        <mxCell id="3" value="string numInput, pwInput;&#xa;int num, pw;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="330" y="90" width="140" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Связь -->
+        <mxCell id="4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="2" target="3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Запрос числа -->
+        <mxCell id="5" value="cout &lt;&lt; &quot;Введите число: &quot;;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;" vertex="1" parent="1">
+          <mxGeometry x="330" y="170" width="140" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Связь -->
+        <mxCell id="6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="3" target="5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Ввод числа -->
+        <mxCell id="7" value="cin &gt;&gt; numInput;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="330" y="230" width="140" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Связь -->
+        <mxCell id="8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="5" target="7">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Запрос степени -->
+        <mxCell id="9" value="cout &lt;&lt; &quot;Введите степень: &quot;;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;" vertex="1" parent="1">
+          <mxGeometry x="330" y="290" width="140" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Связь -->
+        <mxCell id="10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="7" target="9">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Ввод степени -->
+        <mxCell id="11" value="cin &gt;&gt; pwInput;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="330" y="350" width="140" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Связь -->
+        <mxCell id="12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="9" target="11">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Конвертация строк в числа -->
+        <mxCell id="13" value="num = stoi(numInput);&#xa;pw = stoi(pwInput);" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="330" y="410" width="140" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Связь -->
+        <mxCell id="14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="11" target="13">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Вызов функции power -->
+        <mxCell id="15" value="k = power(num, pw);" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="340" y="490" width="120" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Связь -->
+        <mxCell id="16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="13" target="15">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Подпрограмма power -->
+        <mxCell id="17" value="ПОДПРОГРАММА power(int n, int x)" style="swimlane;whiteSpace=wrap;html=1;startSize=20;horizontal=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="500" y="350" width="200" height="230" as="geometry"/>
+        </mxCell>
+        
+        <!-- power: начало -->
+        <mxCell id="18" value="НАЧАЛО power" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;" vertex="1" parent="17">
+          <mxGeometry x="40" y="20" width="120" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- power: p = 1 -->
+        <mxCell id="19" value="int p = 1;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;" vertex="1" parent="17">
+          <mxGeometry x="50" y="70" width="100" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- Связь -->
+        <mxCell id="20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="17" source="18" target="19">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- power: i = 1 -->
+        <mxCell id="21" value="i = 1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" vertex="1" parent="17">
+          <mxGeometry x="50" y="110" width="100" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- Связь -->
+        <mxCell id="22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="17" source="19" target="21">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- power: условие i < x -->
+        <mxCell id="23" value="i &lt; x ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;" vertex="1" parent="17">
+          <mxGeometry x="50" y="150" width="100" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Связь -->
+        <mxCell id="24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="17" source="21" target="23">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- power: p *= n -->
+        <mxCell id="25" value="p *= n;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" vertex="1" parent="17">
+          <mxGeometry x="190" y="150" width="80" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- Связь ДА -->
+        <mxCell id="26" value="Да" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="17" source="23" target="25">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="150" y="180" as="sourcePoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- power: i++ -->
+        <mxCell id="27" value="i++" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" vertex="1" parent="17">
+          <mxGeometry x="190" y="190" width="80" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- Связь -->
+        <mxCell id="28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="17" source="25" target="27">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Связь назад к условию -->
+        <mxCell id="29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="17" source="27" target="23">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="230" y="220" as="sourcePoint"/>
+            <mxPoint x="100" y="200" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- power: return p -->
+        <mxCell id="30" value="return p;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;" vertex="1" parent="17">
+          <mxGeometry x="50" y="230" width="100" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- Связь НЕТ -->
+        <mxCell id="31" value="Нет" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="17" source="23" target="30">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- power: конец -->
+        <mxCell id="32" value="КОНЕЦ power" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;" vertex="1" parent="17">
+          <mxGeometry x="60" y="270" width="80" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Связь -->
+        <mxCell id="33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="17" source="30" target="32">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Вывод результата -->
+        <mxCell id="34" value="cout &lt;&lt; &quot;Число &quot; &lt;&lt; num &lt;&lt; &quot; в степени &quot; &lt;&lt; pw &lt;&lt; &quot; = &quot; &lt;&lt; k &lt;&lt; endl;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="300" y="550" width="200" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- Связь -->
+        <mxCell id="35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="15" target="34">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- КОНЕЦ main -->
+        <mxCell id="36" value="return 0;&#10;КОНЕЦ main()" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="340" y="620" width="120" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- Связь -->
+        <mxCell id="37" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="34" target="36">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Пояснения -->
+        <mxCell id="38" value="ПРОГРАММА ВОЗВЕДЕНИЯ В СТЕПЕНЬ" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontStyle=1;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="220" height="30" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="39" value="Ввод чисел как строк (string)&#xa;с последующей конвертацией в int" style="text;html=1;align=left;verticalAlign=top;points=[];autosize=1;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="20" y="60" width="200" height="30" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="40" value="stoi() - функция конвертации&#xa;string в integer" style="text;html=1;align=left;verticalAlign=top;points=[];autosize=1;fillColor=#ffe6cc;" vertex="1" parent="1">
+          <mxGeometry x="20" y="100" width="150" height="30" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="41" value="Функция power():" style="text;html=1;align=left;verticalAlign=top;points=[];autosize=1;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="150" width="100" height="20" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="42" value="• Начальное значение p = 1&#xa;• Цикл от i = 1 до x-1&#xa;• На каждой итерации p *= n" style="text;html=1;align=left;verticalAlign=top;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="180" width="160" height="50" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="43" value="ОГРАНИЧЕНИЯ:" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontStyle=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="20" y="250" width="110" height="30" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="44" value="• Диапазон чисел: от -2³² до 2³²&#xa;• Диапазон степеней: от -2³² до 2³²&#xa;• Но результат может переполниться!" style="text;html=1;align=left;verticalAlign=top;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="290" width="250" height="50" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

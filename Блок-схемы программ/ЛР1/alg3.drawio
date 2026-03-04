@@ -1,0 +1,193 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.5.2 Chrome/142.0.7444.265 Electron/39.6.1 Safari/537.36" version="29.5.2">
+  <diagram name="Обмен переменных" id="0">
+    <mxGraphModel dx="1008" dy="688" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;" value="НАЧАЛО main()" vertex="1">
+          <mxGeometry height="50" width="120" x="340" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;" value="int a = 2;&#xa;int b = 5;" vertex="1">
+          <mxGeometry height="60" width="140" x="330" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="4" edge="1" parent="1" source="2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" value="cout &lt;&lt; &quot;до обмена: &quot; &#xa;     &lt;&lt; a &lt;&lt; &quot; &quot; &lt;&lt; b;" vertex="1">
+          <mxGeometry height="50" width="140" x="330" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="6" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" value="obmen1(a, b)" vertex="1">
+          <mxGeometry height="40" width="120" x="340" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="8" edge="1" parent="1" source="5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="7" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=20;horizontal=1;fillColor=#e1d5e7;" value="ПОДПРОГРАММА obmen1" vertex="1">
+          <mxGeometry height="140" width="200" x="520" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="10" parent="9" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;" value="НАЧАЛО obmen1(a, b)" vertex="1">
+          <mxGeometry height="40" width="120" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="11" parent="9" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" value="temp = a" vertex="1">
+          <mxGeometry height="30" width="100" x="50" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="12" edge="1" parent="9" source="10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="11" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="13" parent="9" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" value="a = b" vertex="1">
+          <mxGeometry height="30" width="100" x="50" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="14" edge="1" parent="9" source="11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="13" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="15" parent="9" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" value="b = temp" vertex="1">
+          <mxGeometry height="30" width="100" x="50" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="16" edge="1" parent="9" source="13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="15" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="17" parent="9" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" value="cout &lt;&lt; &quot;в функции 1: &quot; &#xa;     &lt;&lt; a &lt;&lt; &quot; &quot; &lt;&lt; b;" vertex="1">
+          <mxGeometry height="40" width="120" x="40" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="18" edge="1" parent="9" source="15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="17" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="19" parent="9" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;" value="КОНЕЦ obmen1" vertex="1">
+          <mxGeometry height="40" width="80" x="60" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="20" edge="1" parent="9" source="17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="19" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="21" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" value="cout &lt;&lt; &quot;после обмена 1: &quot; &#xa;     &lt;&lt; a &lt;&lt; &quot; &quot; &lt;&lt; b;" vertex="1">
+          <mxGeometry height="50" width="140" x="330" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="22" edge="1" parent="1" source="7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="21" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="23" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" value="obmen2(&amp;a, &amp;b)" vertex="1">
+          <mxGeometry height="40" width="120" x="340" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="24" edge="1" parent="1" source="21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="23" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="25" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=20;horizontal=1;fillColor=#e1d5e7;" value="ПОДПРОГРАММА obmen2" vertex="1">
+          <mxGeometry height="190" width="200" x="510" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="26" parent="25" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;" value="НАЧАЛО obmen2(*a, *b)" vertex="1">
+          <mxGeometry height="40" width="120" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="27" parent="25" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" value="temp = *a" vertex="1">
+          <mxGeometry height="30" width="100" x="50" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="28" edge="1" parent="25" source="26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="27" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="29" parent="25" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" value="*a = *b" vertex="1">
+          <mxGeometry height="30" width="100" x="50" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="30" edge="1" parent="25" source="27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="29" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="31" parent="25" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" value="*b = temp" vertex="1">
+          <mxGeometry height="30" width="100" x="50" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="32" edge="1" parent="25" source="29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="31" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="33" parent="25" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" value="cout &lt;&lt; &quot;в функции 2: &quot; &#xa;     &lt;&lt; *a &lt;&lt; &quot; &quot; &lt;&lt; *b;" vertex="1">
+          <mxGeometry height="40" width="120" x="40" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="34" edge="1" parent="25" source="31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="33" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="35" parent="25" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;" value="КОНЕЦ obmen2" vertex="1">
+          <mxGeometry height="40" width="80" x="60" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="36" edge="1" parent="25" source="33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="35" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="37" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" value="cout &lt;&lt; &quot;после обмена 2: &quot; &#xa;     &lt;&lt; a &lt;&lt; &quot; &quot; &lt;&lt; b;" vertex="1">
+          <mxGeometry height="50" width="140" x="330" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="38" edge="1" parent="1" source="23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="37" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="39" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" value="obmen3(a, b)" vertex="1">
+          <mxGeometry height="40" width="120" x="340" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="40" edge="1" parent="1" source="37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="39" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="41" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=20;horizontal=1;fillColor=#e1d5e7;" value="ПОДПРОГРАММА obmen3" vertex="1">
+          <mxGeometry height="190" width="200" x="60" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="42" parent="41" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;" value="НАЧАЛО obmen3(a, b)" vertex="1">
+          <mxGeometry height="40" width="120" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="43" parent="41" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" value="temp = a" vertex="1">
+          <mxGeometry height="30" width="100" x="50" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="44" edge="1" parent="41" source="42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="43" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="45" parent="41" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" value="a = b" vertex="1">
+          <mxGeometry height="30" width="100" x="50" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="46" edge="1" parent="41" source="43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="45" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="47" parent="41" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" value="b = temp" vertex="1">
+          <mxGeometry height="30" width="100" x="50" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="48" edge="1" parent="41" source="45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="47" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="49" parent="41" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" value="cout &lt;&lt; &quot;в функции 3: &quot; &#xa;     &lt;&lt; a &lt;&lt; &quot; &quot; &lt;&lt; b;" vertex="1">
+          <mxGeometry height="40" width="120" x="40" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="50" edge="1" parent="41" source="47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="49" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="51" parent="41" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;" value="КОНЕЦ obmen3" vertex="1">
+          <mxGeometry height="40" width="80" x="60" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="52" edge="1" parent="41" source="49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="51" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="53" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" value="cout &lt;&lt; &quot;после обмена 3: &quot; &#xa;     &lt;&lt; a &lt;&lt; &quot; &quot; &lt;&lt; b;" vertex="1">
+          <mxGeometry height="50" width="140" x="330" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="54" edge="1" parent="1" source="39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="53" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="55" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;" value="КОНЕЦ main()" vertex="1">
+          <mxGeometry height="50" width="120" x="340" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="56" edge="1" parent="1" source="53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="55" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="57" parent="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontStyle=1;fillColor=#fff2cc;" value="ПЕРЕДАЧА ПАРАМЕТРОВ:" vertex="1">
+          <mxGeometry height="30" width="160" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="58" parent="1" style="text;html=1;align=left;verticalAlign=top;points=[];autosize=1;fillColor=#dae8fc;" value="obmen1 - передача по значению&#xa;Изменения только внутри функции" vertex="1">
+          <mxGeometry height="30" width="220" x="20" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="59" parent="1" style="text;html=1;align=left;verticalAlign=top;points=[];autosize=1;fillColor=#dae8fc;" value="obmen2 - передача по указателю&#xa;Изменяет оригинальные переменные" vertex="1">
+          <mxGeometry height="30" width="230" x="20" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="60" parent="1" style="text;html=1;align=left;verticalAlign=top;points=[];autosize=1;fillColor=#dae8fc;" value="obmen3 - передача по ссылке&#xa;Изменяет оригинальные переменные" vertex="1">
+          <mxGeometry height="30" width="230" x="20" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="61" parent="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontStyle=1;fillColor=#ffe6cc;" value="РЕЗУЛЬТАТ:" vertex="1">
+          <mxGeometry height="30" width="100" x="20" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="62" parent="1" style="text;html=1;align=left;verticalAlign=top;points=[];autosize=1;" value="• obmen1 не изменяет a и b в main&#xa;• obmen2 изменяет a и b через указатели&#xa;• obmen3 изменяет a и b через ссылки" vertex="1">
+          <mxGeometry height="50" width="260" x="20" y="230" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,190 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Sum Row" id="sum-row">
+    <mxGraphModel dx="1000" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- НАЧАЛО -->
+        <mxCell id="2" value="НАЧАЛО" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="320" y="40" width="120" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- Входные параметры -->
+        <mxCell id="3" value="Вход: матрица m[][N],&#xa;номер строки i" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="320" y="120" width="150" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Стрелка: НАЧАЛО → Входные параметры -->
+        <mxCell id="4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="2" target="3" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Инициализация суммы -->
+        <mxCell id="5" value="sum = 0" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="320" y="220" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Стрелка: Входные параметры → Инициализация -->
+        <mxCell id="6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="3" target="5" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Цикл for j (столбцы) -->
+        <mxCell id="7" value="for j = 0 to N-1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="320" y="320" width="120" height="80" as="geometry"/>
+        </mxCell>
+        
+        <!-- Стрелка: Инициализация → цикл j -->
+        <mxCell id="8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="5" target="7" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Суммирование элемента строки -->
+        <mxCell id="9" value="sum += m[i][j]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="320" y="440" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Стрелка: цикл j (ДА) → Суммирование -->
+        <mxCell id="10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="7" target="9" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Возврат к циклу j (после суммирования) -->
+        <mxCell id="11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="9" target="7" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="12" value="j++" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="11" vertex="1" connectable="0">
+          <mxGeometry x="-0.3" y="2" relative="1" as="geometry">
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Возврат результата -->
+        <mxCell id="13" value="ВЕРНУТЬ sum" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="320" y="570" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Стрелка: цикл j (НЕТ) → Возврат результата -->
+        <mxCell id="14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="7" target="13" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="380" y="520"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="15" value="j == N" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="14" vertex="1" connectable="0">
+          <mxGeometry x="0.5" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- КОНЕЦ -->
+        <mxCell id="16" value="КОНЕЦ" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="320" y="670" width="120" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- Стрелка: Возврат → КОНЕЦ -->
+        <mxCell id="17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="13" target="16" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Легенда -->
+        <mxCell id="18" value="Условные обозначения:&#xa;● Овал – начало/конец&#xa;● Прямоугольник с закруглениями – действие&#xa;● Ромб – условие/цикл" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="20" y="40" width="220" height="70" as="geometry"/>
+        </mxCell>
+        
+        <!-- Пояснение по параметрам -->
+        <mxCell id="19" value="Параметры:&#xa;● m[][N] - матрица размером N×N&#xa;● i - индекс строки (от 0 до N-1)" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="500" y="120" width="250" height="70" as="geometry"/>
+        </mxCell>
+        
+        <!-- Визуализация строки матрицы -->
+        <mxCell id="20" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fillColor=#f5f5f5;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="520" y="220" width="280" height="160" as="geometry"/>
+        </mxCell>
+        
+        <!-- Заголовки -->
+        <mxCell id="21" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;childLayout=stackLayout;fillColor=none;" parent="20" vertex="1">
+          <mxGeometry width="280" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="22" value="Строка i" style="shape=partialRectangle;top=0;left=0;bottom=0;right=0;align=center;verticalAlign=middle;fillColor=#e1d5e7;strokeColor=#666666;" parent="21" vertex="1">
+          <mxGeometry width="80" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="23" value="Столбцы j →" style="shape=partialRectangle;top=0;left=0;bottom=0;right=0;align=center;verticalAlign=middle;fillColor=#e1d5e7;strokeColor=#666666;" parent="21" vertex="1">
+          <mxGeometry x="80" width="200" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- Строка матрицы -->
+        <mxCell id="24" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;childLayout=stackLayout;fillColor=none;" parent="20" vertex="1">
+          <mxGeometry y="30" width="280" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="25" value="i" style="shape=partialRectangle;top=0;left=0;bottom=0;right=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#666666;" parent="24" vertex="1">
+          <mxGeometry width="80" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="26" value="[ m[i][0], m[i][1], m[i][2], ..., m[i][N-1] ]" style="shape=partialRectangle;top=0;left=0;bottom=0;right=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#666666;" parent="24" vertex="1">
+          <mxGeometry x="80" width="200" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- Схема обхода -->
+        <mxCell id="27" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fillColor=#f5f5f5;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="520" y="410" width="280" height="160" as="geometry"/>
+        </mxCell>
+        
+        <!-- Заголовок обхода -->
+        <mxCell id="28" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;childLayout=stackLayout;fillColor=none;" parent="27" vertex="1">
+          <mxGeometry width="280" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="29" value="Обход строки i" style="shape=partialRectangle;top=0;left=0;bottom=0;right=0;align=center;verticalAlign=middle;fillColor=#e1d5e7;strokeColor=#666666;" parent="28" vertex="1">
+          <mxGeometry width="280" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- Шаги обхода -->
+        <mxCell id="30" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;childLayout=stackLayout;fillColor=none;" parent="27" vertex="1">
+          <mxGeometry y="30" width="280" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="31" value="j=0: +m[i][0]" style="shape=partialRectangle;top=0;left=0;bottom=0;right=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#666666;" parent="30" vertex="1">
+          <mxGeometry width="93" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="32" value="j=1: +m[i][1]" style="shape=partialRectangle;top=0;left=0;bottom=0;right=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#666666;" parent="30" vertex="1">
+          <mxGeometry x="93" width="94" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="33" value="j=2: +m[i][2]" style="shape=partialRectangle;top=0;left=0;bottom=0;right=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#666666;" parent="30" vertex="1">
+          <mxGeometry x="187" width="93" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- Продолжение обхода -->
+        <mxCell id="34" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;childLayout=stackLayout;fillColor=none;" parent="27" vertex="1">
+          <mxGeometry y="60" width="280" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="35" value="j=3: +m[i][3]" style="shape=partialRectangle;top=0;left=0;bottom=0;right=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#666666;" parent="34" vertex="1">
+          <mxGeometry width="93" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="36" value="..." style="shape=partialRectangle;top=0;left=0;bottom=0;right=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#666666;" parent="34" vertex="1">
+          <mxGeometry x="93" width="94" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="37" value="j=N-1: +m[i][N-1]" style="shape=partialRectangle;top=0;left=0;bottom=0;right=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#666666;" parent="34" vertex="1">
+          <mxGeometry x="187" width="93" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- Результат -->
+        <mxCell id="38" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;childLayout=stackLayout;fillColor=none;" parent="27" vertex="1">
+          <mxGeometry y="90" width="280" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="39" value="sum = m[i][0] + m[i][1] + ... + m[i][N-1]" style="shape=partialRectangle;top=0;left=0;bottom=0;right=0;align=center;verticalAlign=middle;fillColor=#ffe6cc;strokeColor=#666666;" parent="38" vertex="1">
+          <mxGeometry width="280" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Информация о сложности -->
+        <mxCell id="40" value="Сложность: O(N)&#xa;Количество итераций: N" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=#e1d5e7;" parent="1" vertex="1">
+          <mxGeometry x="520" y="590" width="150" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Пример -->
+        <mxCell id="41" value="Пример для N=4, i=2:&#xa;Строка 2: [9, 10, 11, 12]&#xa;sum = 9+10+11+12 = 42" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="520" y="640" width="200" height="60" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

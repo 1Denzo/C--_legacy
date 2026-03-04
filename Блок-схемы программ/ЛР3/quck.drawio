@@ -1,0 +1,137 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.5.2 Chrome/142.0.7444.265 Electron/39.6.1 Safari/537.36" version="29.5.2">
+  <diagram name="Быстрая сортировка (QuickSort)" id="0">
+    <mxGraphModel dx="1464" dy="849" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;" value="НАЧАЛО quickSort(arr, start, end)" vertex="1">
+          <mxGeometry height="50" width="160" x="320" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;" value="end &amp;lt;= start ?" vertex="1">
+          <mxGeometry height="70" width="140" x="330" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="4" edge="1" parent="1" source="2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;" value="return" vertex="1">
+          <mxGeometry height="40" width="100" x="520" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="6" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="5" value="Да">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470" y="125" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;" value="pivot = arr[end]" vertex="1">
+          <mxGeometry height="40" width="120" x="340" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="8" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="7" value="Нет">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="290" y="135" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" value="storeIndex = start" vertex="1">
+          <mxGeometry height="40" width="120" x="340" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="10" edge="1" parent="1" source="7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="9" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" value="i = start" vertex="1">
+          <mxGeometry height="40" width="120" x="340" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="12" edge="1" parent="1" source="9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="11" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="13" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;" value="i &amp;lt;= end-1 ?" vertex="1">
+          <mxGeometry height="70" width="120" x="340" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="14" edge="1" parent="1" source="11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="13" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="15" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;" value="arr[i] &amp;lt;= pivot ?" vertex="1">
+          <mxGeometry height="70" width="120" x="520" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="16" edge="1" parent="1" source="13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="15" value="Да">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="460" y="405" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" value="swap(arr[i], arr[storeIndex])" vertex="1">
+          <mxGeometry height="40" width="150" x="700" y="385" as="geometry" />
+        </mxCell>
+        <mxCell id="18" edge="1" parent="1" source="15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="17" value="Да">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="640" y="415" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="19" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" value="storeIndex++" vertex="1">
+          <mxGeometry height="40" width="150" x="700" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="20" edge="1" parent="1" source="17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="19" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="21" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" value="i++" vertex="1">
+          <mxGeometry height="40" width="120" x="520" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="22" edge="1" parent="1" source="15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="21" value="Нет">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="460" as="sourcePoint" />
+            <mxPoint x="580" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="23" edge="1" parent="1" source="19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="21" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="775" y="510" as="sourcePoint" />
+            <mxPoint x="580" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="24" edge="1" parent="1" source="21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="13" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="25" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;" value="swap(arr[storeIndex], arr[end])" vertex="1">
+          <mxGeometry height="40" width="150" x="340" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="26" edge="1" parent="1" source="13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="25" value="Нет">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="300" y="435" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="27" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" value="quickSort(arr, start, storeIndex-1)" vertex="1">
+          <mxGeometry height="40" width="200" x="20" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="28" edge="1" parent="1" source="25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;edgeStyle=orthogonalEdgeStyle;html=1;" target="27" value="если storeIndex &amp;gt; start">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="29" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" value="quickSort(arr, storeIndex+1, end)" vertex="1">
+          <mxGeometry height="40" width="200" x="640" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="30" edge="1" parent="1" source="25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;edgeStyle=orthogonalEdgeStyle;html=1;" target="29" value="если storeIndex &amp;lt; end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="31" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;" value="КОНЕЦ" vertex="1">
+          <mxGeometry height="50" width="100" x="340" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="32" edge="1" parent="1" source="27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="31" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="33" edge="1" parent="1" source="29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="31" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="34" parent="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontStyle=1;fillColor=#fff2cc;" value="БЫСТРАЯ СОРТИРОВКА (QuickSort)" vertex="1">
+          <mxGeometry height="30" width="200" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="35" parent="1" style="text;html=1;align=left;verticalAlign=top;points=[];autosize=1;" value="1. Выбор опорного элемента (pivot = arr[end])" vertex="1">
+          <mxGeometry height="20" width="220" x="20" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="36" parent="1" style="text;html=1;align=left;verticalAlign=top;points=[];autosize=1;" value="2. Разделение: элементы &amp;lt;= pivot слева, &amp;gt; справа" vertex="1">
+          <mxGeometry height="20" width="240" x="20" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="37" parent="1" style="text;html=1;align=left;verticalAlign=top;points=[];autosize=1;" value="3. Рекурсивная сортировка левой и правой частей" vertex="1">
+          <mxGeometry height="20" width="220" x="20" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="38" parent="1" style="text;html=1;align=left;verticalAlign=top;points=[];autosize=1;fillColor=#e1d5e7;" value="Сложность: O(n log n) в среднем, O(n²) в худшем" vertex="1">
+          <mxGeometry height="20" width="270" x="20" y="140" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

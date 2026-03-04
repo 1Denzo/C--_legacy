@@ -1,0 +1,129 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.5.2 Chrome/142.0.7444.265 Electron/39.6.1 Safari/537.36" version="29.5.2">
+  <diagram name="Строковые функции C++" id="simplified-flow">
+    <mxGraphModel dx="1449" dy="859" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="start" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;fontStyle=1" value="НАЧАЛО" vertex="1">
+          <mxGeometry height="50" width="120" x="50" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="init" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12" value="Инициализация строк&#xa;str1 = &quot;qwerty&quot;&#xa;str2 = &quot;1234567890&quot;" vertex="1">
+          <mxGeometry height="70" width="160" x="200" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="length_title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=14;fontStyle=1" value="ОПРЕДЕЛЕНИЕ ДЛИНЫ СТРОКИ" vertex="1">
+          <mxGeometry height="30" width="160" x="600" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="length1" parent="1" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontSize=11" value="dlina1()&#xa;(Способ 1: индексация)" vertex="1">
+          <mxGeometry height="50" width="120" x="450" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="length2" parent="1" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontSize=11" value="dlina2()&#xa;(Способ 2: указатели)" vertex="1">
+          <mxGeometry height="50" width="120" x="740" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="length3" parent="1" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontSize=11" value="dlina3()&#xa;(Способ 3: рекурсия)" vertex="1">
+          <mxGeometry height="50" width="120" x="550" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="length_output" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11" value="Вывод результатов:&#xa;длина str1 и str2" vertex="1">
+          <mxGeometry height="40" width="140" x="540" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="copy_title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=14;fontStyle=1" value="КОПИРОВАНИЕ СТРОК" vertex="1">
+          <mxGeometry height="30" width="160" x="440" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="copy_original" parent="1" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;fontSize=11" value="Сохранение оригиналов&#xa;original_str1, original_str2" vertex="1">
+          <mxGeometry height="40" width="160" x="530" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="nTxT5B9aLi1YgPQhqUXo-8" edge="1" parent="1" source="copy_function" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="copy_original" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="copy_function" parent="1" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontSize=11" value="kopir(str1_copy, original_str2)" vertex="1">
+          <mxGeometry height="40" width="160" x="530" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="copy_output" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11" value="Вывод результата копирования" vertex="1">
+          <mxGeometry height="40" width="140" x="540" y="394" as="geometry" />
+        </mxCell>
+        <mxCell id="compare_title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=14;fontStyle=1" value="СРАВНЕНИЕ СТРОК" vertex="1">
+          <mxGeometry height="30" width="160" x="640" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="compare1" parent="1" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontSize=11" value="sravn(original_str1, original_str2)" vertex="1">
+          <mxGeometry height="40" width="140" x="460" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="compare2" parent="1" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontSize=11" value="sravn(original_str1, str3)" vertex="1">
+          <mxGeometry height="40" width="140" x="620" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="concat_title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=14;fontStyle=1" value="КОНКАТЕНАЦИЯ СТРОК" vertex="1">
+          <mxGeometry height="30" width="160" x="440" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="concat_init" parent="1" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;fontSize=11" value="Инициализация dest[100] = &quot;qwerty&quot;" vertex="1">
+          <mxGeometry height="40" width="160" x="610" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="concat_function" parent="1" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontSize=11" value="konkat(dest, str2)" vertex="1">
+          <mxGeometry height="40" width="160" x="425" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="concat_output" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11" value="Вывод результата конкатенации" vertex="1">
+          <mxGeometry height="40" width="140" x="240" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="end" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;fontStyle=1" value="КОНЕЦ" vertex="1">
+          <mxGeometry height="50" width="120" x="70" y="535" as="geometry" />
+        </mxCell>
+        <mxCell id="conn2" edge="1" parent="1" source="init" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="length1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn3" edge="1" parent="1" source="length1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="length2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn4" edge="1" parent="1" source="length2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="length3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn5" edge="1" parent="1" source="length3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="length_output">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn6" edge="1" parent="1" source="length_output" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="copy_original">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn7" edge="1" parent="1" source="copy_original" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="copy_function">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn8" edge="1" parent="1" source="copy_function" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="copy_output">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn9" edge="1" parent="1" source="copy_output" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="compare1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn10" edge="1" parent="1" source="compare1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="compare2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn11" edge="1" parent="1" source="compare2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="concat_init">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn13" edge="1" parent="1" source="concat_function" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="370" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn14" edge="1" parent="1" source="concat_output" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.143;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="group_length" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="190" width="300" x="460" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="group_concat" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="180" width="180" x="500" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="nTxT5B9aLi1YgPQhqUXo-7" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="init">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="170" y="54.58" as="sourcePoint" />
+            <mxPoint x="260" y="54.58" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nTxT5B9aLi1YgPQhqUXo-9" edge="1" parent="1" source="concat_init" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="620" y="600" as="sourcePoint" />
+            <mxPoint x="585" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

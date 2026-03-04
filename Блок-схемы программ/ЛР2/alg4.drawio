@@ -1,0 +1,146 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="MinMax Main Diagonal" id="minmax-diagonal">
+    <mxGraphModel dx="1000" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- НАЧАЛО -->
+        <mxCell id="2" value="НАЧАЛО" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="320" y="40" width="120" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- Инициализация -->
+        <mxCell id="3" value="min = +∞&#xa;max = -∞" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="320" y="120" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Стрелка: НАЧАЛО → Инициализация -->
+        <mxCell id="4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="2" target="3" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Цикл for i (главная диагональ) -->
+        <mxCell id="5" value="for i = 0 to N-1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="320" y="220" width="120" height="80" as="geometry"/>
+        </mxCell>
+        
+        <!-- Стрелка: Инициализация → цикл i -->
+        <mxCell id="6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="3" target="5" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Обновление min и max для диагонального элемента -->
+        <mxCell id="7" value="min = min(min, m[i][i])&#xa;max = max(max, m[i][i])" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="320" y="340" width="120" height="70" as="geometry"/>
+        </mxCell>
+        
+        <!-- Стрелка: цикл i (ДА) → Обновление -->
+        <mxCell id="8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="5" target="7" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Возврат к циклу i (после обновления) -->
+        <mxCell id="9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="7" target="5" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="10" value="i++" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="9" vertex="1" connectable="0">
+          <mxGeometry x="-0.3" y="1" relative="1" as="geometry">
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Возврат результата -->
+        <mxCell id="11" value="ВЕРНУТЬ (min, max)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="320" y="500" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Стрелка: цикл i (НЕТ) → Возврат результата -->
+        <mxCell id="12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="5" target="11" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="380" y="430"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="13" value="i == N" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="12" vertex="1" connectable="0">
+          <mxGeometry x="0.5" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- КОНЕЦ -->
+        <mxCell id="14" value="КОНЕЦ" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="320" y="600" width="120" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- Стрелка: Возврат → КОНЕЦ -->
+        <mxCell id="15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="11" target="14" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Легенда -->
+        <mxCell id="16" value="Условные обозначения:&#xa;● Овал – начало/конец&#xa;● Прямоугольник с закруглениями – действие&#xa;● Ромб – условие/цикл" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="20" y="40" width="220" height="70" as="geometry"/>
+        </mxCell>
+        
+        <!-- Пояснение по бесконечности -->
+        <mxCell id="17" value="+∞ = numeric_limits&lt;float&gt;::infinity()&#xa;-∞ = -numeric_limits&lt;float&gt;::infinity()" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="500" y="120" width="280" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Пояснение по главной диагонали -->
+        <mxCell id="18" value="Обход только главной диагонали:&#xa;элементы m[i][i] для i = 0..N-1" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="500" y="220" width="280" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Визуализация главной диагонали -->
+        <mxCell id="19" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fillColor=#f5f5f5;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="550" y="280" width="180" height="140" as="geometry"/>
+        </mxCell>
+        
+        <!-- Строка 0 -->
+        <mxCell id="20" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;childLayout=stackLayout;fillColor=none;" parent="19" vertex="1">
+          <mxGeometry width="180" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="21" value="i=0: [×  -  -  -]" style="shape=partialRectangle;top=0;left=0;bottom=0;right=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#666666;" parent="20" vertex="1">
+          <mxGeometry width="180" height="35" as="geometry"/>
+        </mxCell>
+        
+        <!-- Строка 1 -->
+        <mxCell id="22" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;childLayout=stackLayout;fillColor=none;" parent="19" vertex="1">
+          <mxGeometry y="35" width="180" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="23" value="i=1: [-  ×  -  -]" style="shape=partialRectangle;top=0;left=0;bottom=0;right=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#666666;" parent="22" vertex="1">
+          <mxGeometry width="180" height="35" as="geometry"/>
+        </mxCell>
+        
+        <!-- Строка 2 -->
+        <mxCell id="24" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;childLayout=stackLayout;fillColor=none;" parent="19" vertex="1">
+          <mxGeometry y="70" width="180" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="25" value="i=2: [-  -  ×  -]" style="shape=partialRectangle;top=0;left=0;bottom=0;right=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#666666;" parent="24" vertex="1">
+          <mxGeometry width="180" height="35" as="geometry"/>
+        </mxCell>
+        
+        <!-- Строка 3 -->
+        <mxCell id="26" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;childLayout=stackLayout;fillColor=none;" parent="19" vertex="1">
+          <mxGeometry y="105" width="180" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="27" value="i=3: [-  -  -  ×]" style="shape=partialRectangle;top=0;left=0;bottom=0;right=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#666666;" parent="26" vertex="1">
+          <mxGeometry width="180" height="35" as="geometry"/>
+        </mxCell>
+        
+        <!-- Пояснение -->
+        <mxCell id="28" value="× - элементы главной диагонали&#xa;- - остальные элементы" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="550" y="430" width="200" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Информация о сложности -->
+        <mxCell id="29" value="Сложность: O(N)&#xa;Количество итераций: N" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=#e1d5e7;" parent="1" vertex="1">
+          <mxGeometry x="500" y="500" width="150" height="40" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

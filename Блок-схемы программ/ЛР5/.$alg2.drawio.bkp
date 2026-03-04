@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2024-01-15T20:00:00.000Z" agent="Mozilla/5.0" version="21.1.2" etag="file-char-counter">
+  <diagram name="Подсчет символов в файле" id="file-counter">
+    <mxGraphModel dx="1200" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- ЛЕГЕНДА -->
+        <mxCell id="legend" value="УСЛОВНЫЕ ОБОЗНАЧЕНИЯ:&#xa;🔵 Овал - Начало/Конец&#xa;🟡 Параллелограмм - Ввод/Вывод&#xa;🟢 Прямоугольник - Операции&#xa;🟠 Ромб - Условия&#xa;🔴 Красный - Ошибка&#xa;⚪ Голубой - Цикл" style="text;html=1;strokeColor=#666666;fillColor=#f9f9f9;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="20" y="20" width="200" height="150" as="geometry"/>
+        </mxCell>
+        
+        <!-- НАЧАЛО -->
+        <mxCell id="start" value="НАЧАЛО" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=16;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="540" y="20" width="120" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- ОБЪЯВЛЕНИЕ ПЕРЕМЕННЫХ -->
+        <mxCell id="declare" value="Объявление переменных:&#xa;c, n[50], buf, empty=0, notempty=0, *f" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;fontSize=11" parent="1" vertex="1">
+          <mxGeometry x="530" y="90" width="160" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- ЗАПРОС ИМЕНИ ФАЙЛА -->
+        <mxCell id="prompt" value="Вывод: 'Введите имя файла:'" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11" parent="1" vertex="1">
+          <mxGeometry x="540" y="170" width="140" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- ВВОД ИМЕНИ ФАЙЛА -->
+        <mxCell id="input" value="scanf('%s', n)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11" parent="1" vertex="1">
+          <mxGeometry x="540" y="230" width="140" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- ОТКРЫТИЕ ФАЙЛА -->
+        <mxCell id="open" value="f = fopen(n, 'r')" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontSize=11" parent="1" vertex="1">
+          <mxGeometry x="540" y="290" width="140" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- ПРОВЕРКА ОТКРЫТИЯ -->
+        <mxCell id="check" value="f == NULL ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11" parent="1" vertex="1">
+          <mxGeometry x="540" y="350" width="140" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- ВЕТКА ОШИБКИ -->
+        <mxCell id="error" value="Вывод: 'Файл не открыт'" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11" parent="1" vertex="1">
+          <mxGeometry x="360" y="380" width="140" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- НАЧАЛО ЦИКЛА ЧТЕНИЯ -->
+        <mxCell id="while_start" value="while (!feof(f))" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="720" y="350" width="160" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- ЧТЕНИЕ СИМВОЛА -->
+        <mxCell id="read" value="buf = getc(f)" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontSize=11" parent="1" vertex="1">
+          <mxGeometry x="730" y="410" width="140" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- ПРОВЕРКА КОНЦА ФАЙЛА -->
+        <mxCell id="check_eof" value="!feof(f) ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11" parent="1" vertex="1">
+          <mxGeometry x="740" y="470" width="120" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- ВЫВОД СИМВОЛА -->
+        <mxCell id="print" value="putchar(buf)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11" parent="1" vertex="1">
+          <mxGeometry x="900" y="470" width="120" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- ПРОВЕРКА ТИПА СИМВОЛА -->
+        <mxCell id="check_type" value="isspace(buf) или iscntrl(buf) ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11" parent="1" vertex="1">
+          <mxGeometry x="740" y="540" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- ПУСТОЙ СИМВОЛ -->
+        <mxCell id="empty_inc" value="empty++" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontSize=11" parent="1" vertex="1">
+          <mxGeometry x="620" y="620" width="100" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- НЕПУСТОЙ СИМВОЛ -->
+        <mxCell id="notempty_inc" value="notempty++" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontSize=11" parent="1" vertex="1">
+          <mxGeometry x="880" y="620" width="100" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- ВОЗВРАТ В ЦИКЛ -->
+        <mxCell id="loop_back" value="возврат в while" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;fontSize=11" parent="1" vertex="1">
+          <mxGeometry x="740" y="680" width="120" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- ЗАКРЫТИЕ ФАЙЛА -->
+        <mxCell id="close" value="fclose(f)" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontSize=11" parent="1" vertex="1">
+          <mxGeometry x="540" y="750" width="140" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- ВЫВОД РЕЗУЛЬТАТОВ -->
+        <mxCell id="results" value="Вывод статистики:&#xa;empty, notempty, total" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11" parent="1" vertex="1">
+          <mxGeometry x="540" y="810" width="140" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- КОНЕЦ -->
+        <mxCell id="end" value="КОНЕЦ" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=16;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="540" y="890" width="120" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- ========== СВЯЗИ ========== -->
+        <mxCell id="conn1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="start" target="declare" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="declare" target="prompt" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="prompt" target="input" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="input" target="open" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="open" target="check" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="check" target="error" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="500" y="380" as="sourcePoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="conn7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="error" target="end" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="check" target="while_start" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="680" y="380" as="sourcePoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="conn9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="while_start" target="read" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="read" target="check_eof" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="check_eof" target="print" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="860" y="495" as="sourcePoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="conn12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="print" target="check_type" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="check_eof" target="close" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="740" y="520" as="sourcePoint"/>
+            <mxPoint x="610" y="750" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="conn14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="check_type" target="empty_inc" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="700" y="570" as="sourcePoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="conn15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="check_type" target="notempty_inc" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="860" y="570" as="sourcePoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="conn16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="empty_inc" target="loop_back" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="notempty_inc" target="loop_back" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="loop_back" target="while_start" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="close" target="results" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="results" target="end" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

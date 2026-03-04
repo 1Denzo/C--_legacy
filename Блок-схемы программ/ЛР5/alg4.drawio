@@ -1,0 +1,204 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.5.2 Chrome/142.0.7444.265 Electron/39.6.1 Safari/537.36" version="29.5.2">
+  <diagram name="Обработка страниц" id="page-processor">
+    <mxGraphModel dx="1705" dy="1011" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="legend" parent="1" style="text;html=1;strokeColor=#666666;fillColor=#f9f9f9;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontSize=10" value="УСЛОВНЫЕ ОБОЗНАЧЕНИЯ:&#xa;🔵 Овал - Начало/Конец&#xa;🟡 Параллелограмм - Ввод/Вывод&#xa;🟢 Прямоугольник - Операции&#xa;🟠 Ромб - Условия/Ветвления&#xa;🟣 Фиолетовый - Функции&#xa;🔴 Красный - Ошибки" vertex="1">
+          <mxGeometry height="150" width="200" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="start" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=16;fontStyle=1" value="НАЧАЛО" vertex="1">
+          <mxGeometry height="50" width="120" x="260" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="header" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12" value="Вывод заголовка программы" vertex="1">
+          <mxGeometry height="40" width="140" x="420" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="menu" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11" value="Вывод меню:&#xa;1 - Создать тест&#xa;2 - Обработать&#xa;3 - Выход" vertex="1">
+          <mxGeometry height="60" width="160" x="570" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="input_choice" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11" value="Ввод выбора (choice)" vertex="1">
+          <mxGeometry height="40" width="140" x="750" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="check_choice" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12" value="choice == ?" vertex="1">
+          <mxGeometry height="80" width="140" x="750" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="choice1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=12;fontStyle=1" value="choice = 1" vertex="1">
+          <mxGeometry height="30" width="80" x="380" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="create_test" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11" value="createTestFile()" vertex="1">
+          <mxGeometry height="40" width="120" x="560" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="view_test" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11" value="viewFile()" vertex="1">
+          <mxGeometry height="40" width="120" x="340" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="process_test" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11" value="processFile()" vertex="1">
+          <mxGeometry height="40" width="120" x="340" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="view_result" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11" value="viewFile() результат" vertex="1">
+          <mxGeometry height="40" width="120" x="340" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="choice2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=12;fontStyle=1" value="choice = 2" vertex="1">
+          <mxGeometry height="30" width="80" x="700" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="input_filename" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11" value="Ввод имени входного файла" vertex="1">
+          <mxGeometry height="40" width="140" x="750" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="output_filename" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11" value="Ввод имени выходного файла" vertex="1">
+          <mxGeometry height="40" width="140" x="750" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="process_file" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11" value="processFile()" vertex="1">
+          <mxGeometry height="40" width="120" x="760" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="view_output" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11" value="viewFile() результат" vertex="1">
+          <mxGeometry height="40" width="120" x="760" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="choice3" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=12;fontStyle=1" value="choice = 3" vertex="1">
+          <mxGeometry height="30" width="80" x="540" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="process_func" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=14;fontStyle=1" value="ФУНКЦИЯ processFile()" vertex="1">
+          <mxGeometry height="30" width="200" x="510" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="open_files" parent="1" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontSize=11" value="Открытие файлов&#xa;ifstream / ofstream" vertex="1">
+          <mxGeometry height="40" width="160" x="900" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="check_files" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11" value="Файлы открыты?" vertex="1">
+          <mxGeometry height="60" width="120" x="360" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="file_error" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11" value="Вывод ошибки" vertex="1">
+          <mxGeometry height="40" width="120" x="360" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="read_loop" parent="1" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;fontSize=12;fontStyle=1" value="while getline()" vertex="1">
+          <mxGeometry height="40" width="140" x="660" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="check_page" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11" value="Строка - номер страницы?" vertex="1">
+          <mxGeometry height="60" width="120" x="960" y="655" as="geometry" />
+        </mxCell>
+        <mxCell id="new_page" parent="1" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontSize=11" value="Новая страница:&#xa;extractPageNumber()" vertex="1">
+          <mxGeometry height="50" width="120" x="960" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="add_line" parent="1" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontSize=11" value="Добавить строку&#xa;removeHyphen()" vertex="1">
+          <mxGeometry height="50" width="120" x="760" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="loop_back" parent="1" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;fontSize=11" value="вернуться к чтению" vertex="1">
+          <mxGeometry height="40" width="120" x="670" y="815" as="geometry" />
+        </mxCell>
+        <mxCell id="write_output" parent="1" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontSize=11" value="Запись результатов:" vertex="1">
+          <mxGeometry height="60" width="160" x="440" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="close_files" parent="1" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontSize=11" value="fout.close()&#xa;fin.close()" vertex="1">
+          <mxGeometry height="50" width="160" x="440" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="end" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=16;fontStyle=1" value="КОНЕЦ" vertex="1">
+          <mxGeometry height="50" width="120" x="210" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="conn1" edge="1" parent="1" source="start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="header">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn2" edge="1" parent="1" source="header" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="menu">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn3" edge="1" parent="1" source="menu" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="input_choice">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn4" edge="1" parent="1" source="input_choice" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="check_choice">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn5" edge="1" parent="1" source="check_choice" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="create_test">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="500" y="330" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn6" edge="1" parent="1" source="create_test" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="view_test">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn7" edge="1" parent="1" source="view_test" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="process_test">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn8" edge="1" parent="1" source="process_test" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="view_result">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn9" edge="1" parent="1" source="view_result" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn10" edge="1" parent="1" source="check_choice" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="input_filename">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="680" y="330" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn11" edge="1" parent="1" source="input_filename" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="output_filename">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn12" edge="1" parent="1" source="output_filename" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="process_file">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn13" edge="1" parent="1" source="process_file" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="view_output">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn14" edge="1" parent="1" source="view_output" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn15" edge="1" parent="1" source="check_choice" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="end">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="610" y="370" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn16" edge="1" parent="1" source="process_file" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="open_files">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn17" edge="1" parent="1" source="open_files" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="check_files">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn18" edge="1" parent="1" source="check_files" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="file_error">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="500" y="760" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn19" edge="1" parent="1" source="file_error" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn20" edge="1" parent="1" source="check_files" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="read_loop">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="660" y="760" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn21" edge="1" parent="1" source="read_loop" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="check_page">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn22" edge="1" parent="1" source="check_page" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="new_page">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="830" y="820" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn23" edge="1" parent="1" source="check_page" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="add_line">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="770" y="850" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn24" edge="1" parent="1" source="new_page" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="loop_back">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn25" edge="1" parent="1" source="add_line" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="loop_back">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn26" edge="1" parent="1" source="loop_back" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="read_loop">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn27" edge="1" parent="1" source="read_loop" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="write_output">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="770" y="770" as="sourcePoint" />
+            <mxPoint x="600" y="1010" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn28" edge="1" parent="1" source="write_output" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="close_files">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn29" edge="1" parent="1" source="close_files" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1YU8WGNzD0K7PQ89dlb5-2" edge="1" parent="1" source="loop_back" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="loop_back">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

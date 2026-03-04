@@ -1,0 +1,91 @@
+<mxfile>
+  <diagram name="Class Diagram">
+    <mxGraphModel dx="1000" dy="600" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- Базовый класс Stream (абстрактный) -->
+        <mxCell id="2" value="&lt;b&gt;Stream&lt;/b&gt;&lt;i&gt; (abstract)&lt;/i&gt;&lt;hr&gt;- filename: string&lt;br&gt;- isOpen: bool&lt;hr&gt;+ open(): bool&lt;br&gt;+ close(): void&lt;br&gt;+ isOpened(): bool&lt;br&gt;+ getFilename(): string" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=1;shadow=0;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="260" height="140" as="geometry"/>
+        </mxCell>
+        
+        <!-- InputFileStream -->
+        <mxCell id="3" value="&lt;b&gt;InputFileStream&lt;/b&gt;&lt;hr&gt;- stream: ifstream&lt;hr&gt;+ open(): bool&lt;br&gt;+ close(): void&lt;br&gt;+ get(char&amp; c): bool&lt;br&gt;+ isBad(): bool&lt;br&gt;+ isEof(): bool" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=1;shadow=0;strokeWidth=2;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="340" y="40" width="260" height="140" as="geometry"/>
+        </mxCell>
+        
+        <!-- OutputFileStream -->
+        <mxCell id="4" value="&lt;b&gt;OutputFileStream&lt;/b&gt;&lt;hr&gt;- stream: ofstream&lt;hr&gt;+ open(): bool&lt;br&gt;+ close(): void&lt;br&gt;+ put(char c): void&lt;br&gt;+ isBad(): bool" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=1;shadow=0;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="340" y="210" width="260" height="130" as="geometry"/>
+        </mxCell>
+        
+        <!-- EncryptionKey -->
+        <mxCell id="5" value="&lt;b&gt;EncryptionKey&lt;/b&gt;&lt;hr&gt;- key: string&lt;br&gt;- currentIndex: size_t&lt;hr&gt;+ EncryptionKey(k: string)&lt;br&gt;+ getNextChar(): char&lt;br&gt;+ getLength(): size_t&lt;br&gt;+ reset(): void" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=1;shadow=0;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="40" y="370" width="260" height="140" as="geometry"/>
+        </mxCell>
+        
+        <!-- XorEncryptor -->
+        <mxCell id="6" value="&lt;b&gt;XorEncryptor&lt;/b&gt;&lt;hr&gt;- key: EncryptionKey&amp;&lt;hr&gt;+ XorEncryptor(k: EncryptionKey&amp;)&lt;br&gt;+ encrypt(input: char): char&lt;br&gt;+ decrypt(input: char): char" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=1;shadow=0;strokeWidth=2;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="340" y="370" width="260" height="130" as="geometry"/>
+        </mxCell>
+        
+        <!-- FileEncryptorApp -->
+        <mxCell id="7" value="&lt;b&gt;FileEncryptorApp&lt;/b&gt;&lt;hr&gt;- input: unique_ptr&lt;InputFileStream&gt;&lt;br&gt;- output: unique_ptr&lt;OutputFileStream&gt;&lt;br&gt;- key: unique_ptr&lt;EncryptionKey&gt;&lt;br&gt;- encryptor: unique_ptr&lt;XorEncryptor&gt;&lt;hr&gt;+ run(argc: int, argv: char**): int&lt;br&gt;- printUsage(programName: const char*): void&lt;br&gt;- validateArguments(argc, argv): bool&lt;br&gt;- openFiles(inputFile, outputFile): bool&lt;br&gt;- processEncryption(): bool&lt;br&gt;- printResults(success: bool): void" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=1;shadow=0;strokeWidth=2;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="640" y="40" width="300" height="230" as="geometry"/>
+        </mxCell>
+        
+        <!-- Стрелки наследования (треугольные) -->
+        <mxCell id="8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="2" target="3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="2" target="4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Стрелки ассоциации (ромб) -->
+        <mxCell id="10" value="использует" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeWidth=1;endArrow=open;endFill=0;startArrow=diamondThin;startFill=1;" edge="1" parent="1" source="6" target="5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470" y="470" as="sourcePoint"/>
+            <mxPoint x="170" y="470" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="11" value="использует" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;strokeWidth=1;endArrow=open;endFill=0;startArrow=diamondThin;startFill=1;" edge="1" parent="1" source="7" target="6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="12" value="содержит" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;strokeWidth=1;endArrow=open;endFill=0;startArrow=diamondThin;startFill=1;" edge="1" parent="1" source="7" target="5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="13" value="содержит" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;entryX=0.5;entryY=1;strokeWidth=1;endArrow=open;endFill=0;startArrow=diamondThin;startFill=1;" edge="1" parent="1" source="7" target="3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="140"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="14" value="содержит" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;entryX=0.5;entryY=0;strokeWidth=1;endArrow=open;endFill=0;startArrow=diamondThin;startFill=1;" edge="1" parent="1" source="7" target="4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="275"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Заголовок -->
+        <mxCell id="15" value="&lt;h1&gt;📊 Диаграмма классов FileEncryptor&lt;/h1&gt;&lt;hr&gt;&lt;i&gt;XOR шифрование с объектно-ориентированной архитектурой&lt;/i&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="520" width="900" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- Легенда -->
+        <mxCell id="16" value="&lt;b&gt;Условные обозначения:&lt;/b&gt;&lt;br&gt;⬜ Абстрактный класс&lt;br&gt;🔼 Наследование&lt;br&gt;💎 Агрегация/Композиция" style="text;html=1;strokeColor=none;fillColor=#f5f5f5;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="300" width="200" height="80" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
